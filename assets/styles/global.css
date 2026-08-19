@@ -1,0 +1,17 @@
+/* Reset */
+* {
+    padding: 0;
+    margin: 0;
+    border: none;
+    outline: none;
+    text-decoration: none;
+    cursor: url("../media/cursor.svg") 8 8, auto;
+}
+
+:root {
+    --accent-primary: #6500FF;
+    --accent-secondary: #4bfc2c;
+
+    --bg-primary: #080808;
+    --bg-secondary: #4C5157;
+}

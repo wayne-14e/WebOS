@@ -1,0 +1,70 @@
+@import url(global.css);
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=VT323&display=swap');
+
+body {
+    font-family: "VT323", monospace;
+    font-weight: 400;
+    font-style: normal;
+    color: #fff;
+    background-image: url(../media/bg.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 0 45%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+header {
+    background: #4c5157a4;
+    backdrop-filter: blur(7px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: var(--accent-primary) 1px solid;
+    padding: 0 80px;
+
+}
+
+.logo span {
+    display: inline-block;
+    font-size: 18px;
+}
+.logo:hover {
+    outline-offset: 2px;
+    outline: 1px solid var(--accent-secondary);
+}
+
+.apps_panel {
+    display: flex;
+    gap: 15px;
+    padding: 10px 25px;
+    background: var(--bg-secondary);
+}
+
+.app {
+    background: transparent;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--bg-primary);
+    color: #fff;
+    width: 64px;
+    height: 64px;
+    border: 1px solid var(--accent-primary);
+    outline-offset: 2px;
+}
+
+.app img {
+    height: 50px;
+}
+
+.app:hover {
+    outline: 1px solid var(--accent-secondary);
+    border-radius: 0px;
+}
+
+.app span {
+    font-family: "VT323", monospace;
+    font-size: 14px;
+}
