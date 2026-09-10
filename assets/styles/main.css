@@ -7,6 +7,7 @@ body {
     font-style: normal;
     color: #fff;
     background-image: url(../media/bg.png);
+    backdrop-filter: brightness(0.69);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 0 45%;
@@ -29,6 +30,7 @@ header {
     display: inline-block;
     font-size: 18px;
 }
+
 .logo:hover {
     outline-offset: 2px;
     outline: 1px solid var(--accent-secondary);
@@ -67,4 +69,161 @@ header {
 .app span {
     font-family: "VT323", monospace;
     font-size: 14px;
+}
+
+#dark {
+    width: 100vw;
+    height: 100vh;
+    z-index: 5;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: var(--bg-primary);
+    opacity: 95%;
+    transition: ease 0.5s;
+}
+
+.welcome {
+    z-index: 6;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    background-color: #4c515789;
+    filter: brightness(1);
+    align-items: flex-end;
+    backdrop-filter: blur(4px);
+    padding: 10px 20px 0px 20px;
+    transition: ease 0.5s;
+}
+
+.welcome button {
+    height: fit-content;
+    margin: 20px;
+    width: 80px;
+    padding: 10px;
+    font-family: "VT323", monospace;
+    font-size: 20px;
+    color: #fff;
+    background-color: var(--accent-primary);
+}
+
+.welcome button:hover {
+    outline: 2px #fff solid;
+}
+
+.date_time {
+    position: absolute;
+    bottom: 40px;
+    left: 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    z-index: 3;
+    font-family: "JetBrains Mono", monospace;
+
+}
+
+.info_panel {
+    display: flex;
+    gap: 20px;
+}
+
+/* APPS */
+
+.to_do_app {
+    display: none;
+    z-index: 4;
+    width: 350px;
+    height: 400px;
+    background: var(--bg-primary);
+    position: absolute;
+    top: 80;
+    left: 100px;
+    border: 1px solid var(--accent-primary);
+}
+
+.dragzone {
+    border: 1px solid var(--accent-primary);
+    padding: 10px 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.dragzone button {
+    background: transparent;
+    border: 1px solid var(--accent-primary);
+    padding: 3px;
+}
+
+.dragzone button:hover {
+    border: 1px solid red;
+}
+
+.app_main {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    padding: 15px 20px;
+}
+
+.input {
+    width: 100%;
+    display: flex;
+    gap: 10px;
+}
+
+.input input {
+    flex: 1;
+    padding: 3px 7px;
+}
+
+.input button {
+    background: transparent;
+    border: 1px solid var(--accent-primary);
+    color: var(--bg-primary);
+    padding: 5px 10px;
+}
+
+.input button:hover {
+    background: var(--accent-primary);
+}
+
+.to_do_list {
+    width: 100%;
+    height: 240px;
+    overflow-y: scroll;
+}
+
+.task::marker {
+    content: "";
+}
+
+.task {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.to_do_list li button {
+    background: transparent;
+    border: 1px solid var(--accent-primary);
+    padding: 2px 4px 4px 4px;
+    margin-left: 5px;
+}
+
+.to_do_list li button:first-child:hover {
+    border: 1px solid var(--accent-secondary);
+}
+
+.to_do_list li button:last-child:hover {
+    border: 1px solid red;
+}
+
+.task_text {
+    word-break: break-all;
+    text-decoration: none;
 }

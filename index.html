@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,41 +8,79 @@
     <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="assets/styles/main.css">
 </head>
+
 <body>
+    <div id="dark"></div>
     <header>
         <div class="logo">
             <span>[ 2026 WWOS™ © ]</span>
         </div>
         <div class="apps_panel">
-            <button class="app">
+            <button class="app" id="all_apps">
                 <img src="assets/media/menu.png" alt="folder">
                 <span>All apps</span>
             </button>
-            <button class="app">
+            <button class="app" id="settings">
                 <img src="assets/media/settings.png" alt="settings">
                 <span>Settings</span>
             </button>
-            <button class="app">
+            <button class="app" id="browser">
                 <img src="assets/media/browser.png" alt="browser">
                 <span>Browser</span>
             </button>
-            <button class="app">
+            <button class="app" id="todo">
                 <img src="assets/media/to-do.png" alt="to-do">
                 <span>To-do</span>
             </button>
         </div>
         <div class="info_panel">
-            <span class="location" id="location"></span>
-            <span class="time" id="time"></span>
             <span class="battery" id="battery"></span>
             <span class="security" id="security"></span>
         </div>
     </header>
     <main>
+        <!-- welcome -->
+        <div class="welcome" id="welcome">
+            <img src="assets/media/welcome.png" alt="Welcome!" width="450px">
+            <button id="start">OK</button>
+        </div>
+
+        <!-- static UI -->
+        <div class="date_time">
+            <h1 class="date" id="date"></h1>
+            <h2 class="time" id="time"></h2>
+        </div>
+
+
+        <!-- apps -->
+         <!-- to do -->
+        <div class="to_do_app" draggable="true" id="to_do_app">
+            <div class="dragzone" id="dragzone">
+                <span>> to_do.app</span>
+                <button id="close_to_do">❌</button>
+            </div>
+            <div class="app_main">
+                <center>
+                    <h2>TO DO</h2>
+                </center>
+                <div class="input">
+                    <input id="to_do_input" type="text" placeholder="Add tasks...">
+                    <button id="add_task">➕</button>
+                </div>
+                <ul class="to_do_list" id="tasks">
+                    <li class="task"><span class="task_text">Hello world!</span>
+                        <div><button id="task_done">✔️</button><button id="delete_task">❌</button></div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- browser -->
+
 
     </main>
 
-
     <script src="assets/scripts/main.js" type="module"></script>
 </body>
+
 </html>
