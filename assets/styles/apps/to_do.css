@@ -1,0 +1,66 @@
+/* TO DO */
+
+#to_do_app {
+    width: 350px;
+    height: 400px;
+    top: 100px;
+    left: 20px;
+}
+
+.input {
+    width: 100%;
+    display: flex;
+    gap: 10px;
+}
+
+.input input {
+    flex: 1;
+    padding: 3px 7px;
+}
+
+.input button {
+    background: transparent;
+    border: 1px solid var(--accent-primary);
+    color: var(--bg-primary);
+    padding: 5px 10px;
+}
+
+.input button:hover {
+    background: var(--accent-primary);
+}
+
+.to_do_list {
+    width: 100%;
+    height: 240px;
+    overflow-y: auto;
+}
+
+.task::marker {
+    content: "";
+}
+
+.task {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.to_do_list li button {
+    background: transparent;
+    border: 1px solid var(--accent-primary);
+    padding: 2px 4px 4px 4px;
+    margin-left: 5px;
+}
+
+.to_do_list li button:first-child:hover {
+    border: 1px solid var(--accent-secondary);
+}
+
+.to_do_list li button:last-child:hover {
+    border: 1px solid red;
+}
+
+.task_text {
+    word-break: break-all;
+    text-decoration: none;
+}

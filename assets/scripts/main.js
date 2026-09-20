@@ -1,5 +1,8 @@
 import('./utils.js');
-
+import('./apps/to_do.js');
+import('./apps/browser.js')
+import('./apps/settings.js')
+import('./apps/notepad.js')
 
 
 // [ Welcome ]
@@ -12,71 +15,37 @@ const startBtn = document.getElementById("start").onclick = () => {
     welcomeScreen.style.display = "none";
 }
 
+// [ Menu Window ]
 
-//  [ Apps ]
-
-// to_do
-
-const toDoIcon = document.getElementById("todo").onclick = () => {
-    const toDoElem = document.getElementById("to_do_app");
-    const toDoHeader = document.getElementById("dragzone");
+const allAppsWindow = document.getElementById("all_apps_window");
+const menuDragzone = document.getElementById("menu_dragzone");
+const menuApp = document.getElementById("all_apps").onclick = () => {
+    allAppsWindow.style.display = "block";
 
     let isDragging = false;
     let offsetX = 0;
     let offsetY = 0;
 
-    toDoElem.style.display = "block";
 
-    toDoHeader.addEventListener("mousedown", (e) => {
+    menuDragzone.addEventListener("mousedown", (e) => {
         isDragging = true;
 
-        offsetX = e.clientX - toDoElem.offsetLeft;
-        offsetY = e.clientY - toDoElem.offsetTop;
+        offsetX = e.clientX - allAppsWindow.offsetLeft;
+        offsetY = e.clientY - allAppsWindow.offsetTop;
     });
 
     document.addEventListener("mousemove", (e) => {
         if (!isDragging) return;
 
-        toDoElem.style.left = `${e.clientX - offsetX}px`;
-        toDoElem.style.top = `${e.clientY - offsetY}px`;
+        allAppsWindow.style.left = `${e.clientX - offsetX}px`;
+        allAppsWindow.style.top = `${e.clientY - offsetY}px`;
     })
 
     document.addEventListener("mouseup", () => {
         isDragging = false;
     })
 
-    document.getElementById("close_to_do").onclick = () => {
-        toDoElem.style.display = "none";
+    document.getElementById("close_menu").onclick = () => {
+        allAppsWindow.style.display = "none";
     }
-
-    // Main Funtionality
-
-    const inputElem = document.getElementById("to_do_input");
-    const addTask = document.getElementById("add_task");
-    const tasksBox = document.getElementById("tasks");
-
-    addTask.onclick = () => {
-        if (inputElem.value != "") {
-            let task = `<li class="task"><span class="task_text">${inputElem.value}</span><div><button id="task_done">✔️</button><button id="delete_task">❌</button></div></li>`;
-            tasksBox.insertAdjacentHTML('beforeend', task);
-        }
-        inputElem.value = "";
-    }
-
-    tasksBox.addEventListener("click", (event) => {
-        const clickedElem = event.target;
-
-        if (clickedElem.id == "delete_task") {
-            clickedElem.closest("li").remove();
-        }
-        if (clickedElem.id == "task_done") {
-            var taskText = clickedElem.closest("li").querySelector(".task_text");
-            if (taskText.style.textDecoration == "line-through") {
-                taskText.style.textDecoration = "none";
-            } else {
-                taskText.style.textDecoration = "line-through";
-            }
-        }
-    });
 }
-

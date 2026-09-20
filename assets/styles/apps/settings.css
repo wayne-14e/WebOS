@@ -1,0 +1,82 @@
+/* SETTINGS */
+
+#settings_app {
+    width: 450px;
+    height: 400px;
+    top: 120px;
+    right: 50px;
+}
+
+.app_main.settings {
+    align-items: start;
+}
+
+.app_main.settings h2 {
+    width: 100%;
+    text-align: center;
+}
+
+.settings_title {
+    margin-top: 10px;
+}
+
+.themes {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    gap: 10px;
+}
+
+.theme_box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    padding-bottom: 3px;
+    outline-offset: 3px;
+    outline: 1px dashed var(--accent-primary);
+}   
+
+.theme_box span {
+    text-align: center;
+}
+
+.theme_box:first-child {
+    outline: 1px solid var(--accent-secondary);
+}
+
+.theme_box:hover {
+    outline: 1px solid var(--accent-secondary);
+}
+
+.theme_box img {
+    width: 100%;
+}
+
+.layouts_box {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.radio_box {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    border: 1px dashed var(--accent-primary);
+    padding: 3px;
+}
+
+.radio_box:first-child {
+    border: 1px solid var(--accent-secondary);
+}
+
+.radio_box:hover {
+    border: 1px solid var(--accent-secondary);
+}
+
+.radio_box input[type="radio"] {
+    width: 15px;
+    height: 15px;
+    accent-color: var(--accent-secondary);
+}

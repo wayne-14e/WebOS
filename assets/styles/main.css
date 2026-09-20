@@ -1,5 +1,9 @@
 @import url(global.css);
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=VT323&display=swap');
+@import url(apps/to_do.css);
+@import url(apps/browser.css);
+@import url(apps/settings.css);
+@import url(apps/notepad.css);
 
 body {
     font-family: "VT323", monospace;
@@ -15,15 +19,25 @@ body {
     overflow: hidden;
 }
 
+::selection{
+    background: var(--accent-secondary);
+    color: var(--bg-primary);
+}
+
 header {
     background: #4c5157a4;
     backdrop-filter: blur(7px);
+    border-bottom: var(--accent-primary) 1px solid;
+    width: 100%;
+    position: absolute;
+    top: 0;
+}
+
+.header_wrapper{
+    padding: 0 80px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: var(--accent-primary) 1px solid;
-    padding: 0 80px;
-
 }
 
 .logo span {
@@ -48,7 +62,6 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
     background: var(--bg-primary);
     color: #fff;
     width: 64px;
@@ -69,6 +82,7 @@ header {
 .app span {
     font-family: "VT323", monospace;
     font-size: 14px;
+    line-height: 12px;
 }
 
 #dark {
@@ -122,7 +136,6 @@ header {
     gap: 20px;
     z-index: 3;
     font-family: "JetBrains Mono", monospace;
-
 }
 
 .info_panel {
@@ -132,15 +145,11 @@ header {
 
 /* APPS */
 
-.to_do_app {
+.app_window {
     display: none;
     z-index: 4;
-    width: 350px;
-    height: 400px;
     background: var(--bg-primary);
     position: absolute;
-    top: 80;
-    left: 100px;
     border: 1px solid var(--accent-primary);
 }
 
@@ -170,60 +179,20 @@ header {
     padding: 15px 20px;
 }
 
-.input {
-    width: 100%;
-    display: flex;
-    gap: 10px;
+
+.all_apps_window {
+    display: none;
+    position: absolute;
+    width: fit-content;
+    height: auto;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%);
 }
 
-.input input {
-    flex: 1;
-    padding: 3px 7px;
-}
-
-.input button {
-    background: transparent;
-    border: 1px solid var(--accent-primary);
-    color: var(--bg-primary);
-    padding: 5px 10px;
-}
-
-.input button:hover {
-    background: var(--accent-primary);
-}
-
-.to_do_list {
-    width: 100%;
-    height: 240px;
-    overflow-y: scroll;
-}
-
-.task::marker {
-    content: "";
-}
-
-.task {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 10px;
-}
-
-.to_do_list li button {
-    background: transparent;
-    border: 1px solid var(--accent-primary);
-    padding: 2px 4px 4px 4px;
-    margin-left: 5px;
-}
-
-.to_do_list li button:first-child:hover {
-    border: 1px solid var(--accent-secondary);
-}
-
-.to_do_list li button:last-child:hover {
-    border: 1px solid red;
-}
-
-.task_text {
-    word-break: break-all;
-    text-decoration: none;
+.all_wrapper {
+    padding: 40px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
 }

@@ -9,33 +9,35 @@
     <link rel="stylesheet" href="assets/styles/main.css">
 </head>
 
-<body>
+<body id="body">
     <div id="dark"></div>
-    <header>
-        <div class="logo">
-            <span>[ 2026 WWOS™ © ]</span>
-        </div>
-        <div class="apps_panel">
-            <button class="app" id="all_apps">
-                <img src="assets/media/menu.png" alt="folder">
-                <span>All apps</span>
-            </button>
-            <button class="app" id="settings">
-                <img src="assets/media/settings.png" alt="settings">
-                <span>Settings</span>
-            </button>
-            <button class="app" id="browser">
-                <img src="assets/media/browser.png" alt="browser">
-                <span>Browser</span>
-            </button>
-            <button class="app" id="todo">
-                <img src="assets/media/to-do.png" alt="to-do">
-                <span>To-do</span>
-            </button>
-        </div>
-        <div class="info_panel">
-            <span class="battery" id="battery"></span>
-            <span class="security" id="security"></span>
+    <header id="header">
+        <div class="header_wrapper">
+            <div class="logo">
+                <span>[ 2026 WWOS™ © ]</span>
+            </div>
+            <div class="apps_panel">
+                <button class="app" id="all_apps">
+                    <img src="assets/media/menu.png" alt="folder">
+                    <span>All apps</span>
+                </button>
+                <button class="app settings">
+                    <img src="assets/media/settings.png" alt="settings">
+                    <span>Settings</span>
+                </button>
+                <button class="app browser">
+                    <img src="assets/media/browser.png" alt="browser">
+                    <span>Browser</span>
+                </button>
+                <button class="app todo">
+                    <img src="assets/media/to-do.png" alt="to-do">
+                    <span>To-do</span>
+                </button>
+            </div>
+            <div class="info_panel">
+                <span class="battery" id="battery"></span>
+                <span class="security" id="security"></span>
+            </div>
         </div>
     </header>
     <main>
@@ -46,16 +48,15 @@
         </div>
 
         <!-- static UI -->
-        <div class="date_time">
+        <div class="date_time" id="ui">
             <h1 class="date" id="date"></h1>
             <h2 class="time" id="time"></h2>
         </div>
 
-
         <!-- apps -->
-         <!-- to do -->
-        <div class="to_do_app" draggable="true" id="to_do_app">
-            <div class="dragzone" id="dragzone">
+        <!-- to do -->
+        <div class="app_window" id="to_do_app">
+            <div class="dragzone" id="todo_dragzone">
                 <span>> to_do.app</span>
                 <button id="close_to_do">❌</button>
             </div>
@@ -76,11 +77,130 @@
         </div>
 
         <!-- browser -->
+        <div class="app_window" id="browser_app">
+            <div class="dragzone" id="browser_dragzone">
+                <span>> browser.app</span>
+                <button id="close_browser">❌</button>
+            </div>
+            <div>
+                <script async src="https://cse.google.com/cse.js?cx=e724a6e4b926e4ab4"></script>
+                <div class="gcse-search"></div>
+            </div>
+        </div>
 
+        <!-- settings -->
+        <div class="app_window" id="settings_app">
+            <div class="dragzone" id="settings_dragzone">
+                <span>> settings.app</span>
+                <button id="close_settings">❌</button>
+            </div>
+            <div class="app_main settings">
+                <h2>SETTINGS</h2>
+                <h4 class="settings_title">Themes</h4>
+                <div class="themes">
+                    <div class="theme_box" id="default">
+                        <img src="assets/media/bg.png" alt="Default">
+                        <span>Dark Forest (default)</span>
+                    </div>
+                    <div class="theme_box" id="ocean">
+                        <img src="assets/media/bg2.png" alt="Light">
+                        <span>Ocean</span>
+                    </div>
+                    <div class="theme_box" id="twilight">
+                        <img src="assets/media/bg3.png" alt="Dark2">
+                        <span>Twilight</span>
+                    </div>
+                </div>
+                <h4 class="settings_title">Layout</h4>
+                <form class="layouts_box">
+                    <div class="radio_box">
+                        <label for="v1">Taskbar at top - UI at bottom</label>
+                        <input type="radio" name="layout" id="v1" checked="true">
+                    </div>
+                    <div class="radio_box">
+                        <label for="v2">Taskbar at bottom - UI at top</label>
+                        <input type="radio" name="layout" id="v2">
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- notepad -->
+        <div class="app_window" id="notepad_app">
+            <div class="dragzone" id="notepad_dragzone">
+                <span>> notepad.app</span>
+                <button id="close_notepad">❌</button>
+            </div>
+            <div class="app_main">
+                <div class="tools_panel">
+                    <div class="notepad_name">
+                        <h4 id="notepad_title">Draft</h4>
+                        <i class="fa-sharp fa-solid fa-pen" id="rename"></i>
+                    </div>
+                    <div class="formatting" id="formatting">
+                        <button class="bold_btn" id="text_bold"><b>B</b></button>
+                        <button class="italic_btn" id="text_italic"><i>I</i></button>
+                        <button class="underline_btn" id="text_underline">U</button>
+                        <button class="strike_btn" id="text_strikethrough">S</button>
+                        <button id="clear_notepad"><i class="fa-sharp fa-solid fa-trash-can"
+                                title="Clear draft"></i></button>
+                        <button id="download_notepad"><i class="fa-sharp fa-solid fa-circle-down"
+                                title="Download draft"></i></button>
+                    </div>
+                </div>
+                <div contenteditable="true" class="write_field" id="write_field"></div>
+            </div>
+        </div>
+
+        <!-- gallery -->
+
+
+        <div class="app_window all_apps_window" id="all_apps_window">
+            <div class="dragzone" id="menu_dragzone">
+                <span>> menu.app</span>
+                <button id="close_menu">❌</button>
+            </div>
+            <div class="all_wrapper">
+                <button class="app" id="console">
+                    <img src="assets/media/console.png" alt="console">
+                    <span>Console</span>
+                </button>
+                <button class="app" id="calc">
+                    <img src="assets/media/calc.png" alt="calculator">
+                    <span>Calculator</span>
+                </button>
+                <button class="app" id="clock">
+                    <img src="assets/media/clock.png" alt="clock">
+                    <span>Clock</span>
+                </button>
+                <button class="app" id="gallery">
+                    <img src="assets/media/gallery.png" alt="gallery">
+                    <span>Gallery</span>
+                </button>
+                <button class="app" id="notepad">
+                    <img src="assets/media/notepad.png" alt="notepad">
+                    <span>Notepad</span>
+                </button>
+                <button class="app settings">
+                    <img src="assets/media/settings.png" alt="settings">
+                    <span>Settings</span>
+                </button>
+                <button class="app browser">
+                    <img src="assets/media/browser.png" alt="browser">
+                    <span>Browser</span>
+                </button>
+                <button class="app todo">
+                    <img src="assets/media/to-do.png" alt="to-do">
+                    <span>To-do</span>
+                </button>
+            </div>
+        </div>
 
     </main>
 
+    <script src="https://cdn.quilljs.com/1.3.6/quill.min.js"></script>
     <script src="assets/scripts/main.js" type="module"></script>
+    <script src="https://kit.fontawesome.com/739d9e9ea8.js" crossorigin="anonymous"></script>
 </body>
 
 </html>
