@@ -10,5 +10,14 @@ This WebOS will feature some useful stuff about me and in general: tools, like C
     - battery
     - system security
 - Welcome message
+- Menu with 8 apps total:
+    - Console
+    - Calculator
+    - Clock
+    - Gallery
+    - To Do
+    - Browser
+    - Settings
+    - Notepad
 
-> to be continued :]
+> it's so huge I suggest u click every button yourself, rather than reading it from here, enjoy! :]
