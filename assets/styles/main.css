@@ -4,6 +4,9 @@
 @import url(apps/browser.css);
 @import url(apps/settings.css);
 @import url(apps/notepad.css);
+@import url(apps/gallery.css);
+@import url(apps/clock.css);
+@import url(apps/calc.css);
 
 body {
     font-family: "VT323", monospace;

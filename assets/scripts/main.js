@@ -1,8 +1,11 @@
 import('./utils.js');
 import('./apps/to_do.js');
-import('./apps/browser.js')
-import('./apps/settings.js')
-import('./apps/notepad.js')
+import('./apps/browser.js');
+import('./apps/settings.js');
+import('./apps/notepad.js');
+import('./apps/gallery.js');
+import('./apps/clock.js');
+import('./apps/calc.js');
 
 
 // [ Welcome ]

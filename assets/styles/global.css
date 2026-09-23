@@ -14,3 +14,7 @@
     --bg-primary: #080808;
     --bg-secondary: #4C5157;
 }
+
+button {
+    cursor: pointer;
+}

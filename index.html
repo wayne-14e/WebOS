@@ -53,7 +53,7 @@
             <h2 class="time" id="time"></h2>
         </div>
 
-        <!-- apps -->
+        <!-- APPS -->
         <!-- to do -->
         <div class="app_window" id="to_do_app">
             <div class="dragzone" id="todo_dragzone">
@@ -153,7 +153,174 @@
         </div>
 
         <!-- gallery -->
+        <div class="app_window" id="gallery_app">
+            <div class="dragzone" id="gallery_dragzone">
+                <span>> gallery.app</span>
+                <button id="close_gallery">❌</button>
+            </div>
+            <div class="app_main">
+                <h4>Gallery</h4>
+                <div class="all_folders">
+                    <details class="folders">
+                        <summary>📁 wallpapers</summary>
+                        <ul class="photos">
+                            <li>
+                                <img src="./assets/media/gallery/wallpaper1.png" alt="smile">
+                                <span>smiley</span>
+                                <i class="fa-sharp fa-solid fa-circle-down download_photo" title="Download image"></i>
+                            </li>
+                            <li>
+                                <img src="./assets/media/gallery/wallpaper2.png" alt="fire">
+                                <span>pixel_fire</span>
+                                <i class="fa-sharp fa-solid fa-circle-down download_photo" title="Download image"></i>
+                            </li>
+                            <li>
+                                <img src="./assets/media/gallery/wallpaper3.jpg" alt="city">
+                                <span>night_city</span>
+                                <i class="fa-sharp fa-solid fa-circle-down download_photo" title="Download image"></i>
+                            </li>
+                            <li>
+                                <img src="./assets/media/gallery/wallpaper4.jpg" alt="dodge">
+                                <span>dodge_demon</span>
+                                <i class="fa-sharp fa-solid fa-circle-down download_photo" title="Download image"></i>
+                            </li>
+                            <li>
+                                <img src="./assets/media/gallery/wallpaper5.jpg" alt=cat">
+                                <span>cat</span>
+                                <i class="fa-sharp fa-solid fa-circle-down download_photo" title="Download image"></i>
+                            </li>
+                        </ul>
+                    </details>
+                    <details class="folders">
+                        <summary>📁 about me</summary>
+                        <ul class="photos about">
+                            <li>
+                                <img src="./assets/media/gallery/cruX.jpg" alt="crux">
+                                <span>Crux</span>
+                                <i class="fa-sharp fa-solid fa-circle-down download_photo" title="Download image"></i>
+                            </li>
+                            <li>
+                                <img src="./assets/media/gallery/home.jpg" alt="home">
+                                <span>yard</span>
+                                <i class="fa-sharp fa-solid fa-circle-down download_photo" title="Download image"></i>
+                            </li>
+                            <li>
+                                <img src="./assets/media/gallery/pixel_art.jpg" alt="vader">
+                                <span>pixel_vader</span>
+                                <i class="fa-sharp fa-solid fa-circle-down download_photo" title="Download image"></i>
+                            </li>
+                            <li>
+                                <img src="./assets/media/gallery/trip.jpg" alt="mountains">
+                                <span>mountains</span>
+                                <i class="fa-sharp fa-solid fa-circle-down download_photo" title="Download image"></i>
+                            </li>
+                            <li>
+                                <img src="./assets/media/gallery/sunset.jpg" alt="sunset">
+                                <span>sunset</span>
+                                <i class="fa-sharp fa-solid fa-circle-down download_photo" title="Download image"></i>
+                            </li>
+                            <li>
+                                <img src="./assets/media/gallery/w14_old.jpg" alt="w14">
+                                <span>w14_old</span>
+                                <i class="fa-sharp fa-solid fa-circle-down download_photo" title="Download image"></i>
+                            </li>
+                        </ul>
+                    </details>
+                    <details class="folders">
+                        <summary>📁 custom</summary>
+                        <ul class="photos" id="custom_photos">
+                            <li class="custom_upload">
+                                <label for="photo_upload" class="upload_box">
+                                    <p>Upload your own images</p>
+                                    <p class="upload_btn">[ upload ]</p>
+                                </label>
+                                <input type="file" class="hidden_uploader" id="photo_upload" accept="image/*">
+                            </li>
+                        </ul>
+                    </details>
+                </div>
+            </div>
+        </div>
 
+        <!-- clock -->
+        <div class="app_window" id="clock_app">
+            <div class="dragzone" id="clock_dragzone">
+                <span>> clock.app</span>
+                <button id="close_clock">❌</button>
+            </div>
+            <div class="app_main">
+                <h4>Clock</h4>
+                <!-- timer, countdown, global time - Uzbekistan, US (Washington), China, Russia -->
+                <div class="tabs">
+                    <span class="active_tab" id="timer_tab">timer</span>
+                    <span id="countdown_tab">countdown</span>
+                </div>
+                <div class="timer" id="timer_box">
+                    <span id="timer">00:00:00</span>
+                    <div class="timer_buttons">
+                        <button id="start_timer">[ start ]</button>
+                        <button id="reset_timer">[ reset ]</button>
+                    </div>
+                </div>
+                <div class="countdown" id="countdown_box">
+                    <div class="set_countdown">
+                        <div class="countdown_input">
+                            <input type="number" name="hour" id="hour">
+                            <label for="hours">hours</label>
+                        </div>
+                        <div class="countdown_input">
+                            <input type="number" name="min" id="min">
+                            <label for="min">minutes</label>
+                        </div>
+                        <div class="countdown_input">
+                            <input type="number" name="sec" id="sec">
+                            <label for="sec">seconds</label>
+                        </div>
+                        <span class="countdown_display" id="countd_display"></span>
+                    </div>
+                    <div class="countd_buttons">
+                        <button id="start_countdown">[ start ]</button>
+                        <button id="restart_countdown">[ restart ]</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- calcultor -->
+        <div class="app_window" id="calc_app">
+            <div class="dragzone" id="calc_dragzone">
+                <span>> calculator.app</span>
+                <button id="close_calc">❌</button>
+            </div>
+            <div class="app_main">
+                <input type="text" class="calc_input" id="calc_input" placeholder="O_o">
+                <div class="calc_buttons">
+                    <div class="a">
+                        <button class="calc_button">1</button>
+                        <button class="calc_button">2</button>
+                        <button class="calc_button">3</button>
+                        <button class="calc_button">4</button>
+                        <button class="calc_button">5</button>
+                        <button class="calc_button">6</button>
+                        <button class="calc_button">7</button>
+                        <button class="calc_button">8</button>
+                        <button class="calc_button">9</button>
+                    </div>
+                    <div class="b">
+                        <button class="calc_button" id="delete_char"><i class="fa-sharp fa-solid fa-delete-left"></i></button>
+                        <button class="calc_button">+</button>
+                        <button class="calc_button">-</button>
+                        <button class="calc_button">*</button>
+                    </div>
+                    <div class="c">
+                        <button class="calc_button">0</button>
+                        <button class="calc_button">.</button>
+                        <button class="calc_button">/</button>
+                    </div>
+                </div>
+                <button class="calc_button" id="equal">=</button>
+            </div>
+        </div>
 
         <div class="app_window all_apps_window" id="all_apps_window">
             <div class="dragzone" id="menu_dragzone">

@@ -1,0 +1,80 @@
+#calc_app {
+    width: 200px;
+    height: 280px;
+    top: 200px;
+    right: 20px;
+}
+
+.calc_buttons {
+    width: 108%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+        "a a a b"
+        "a a a b"
+        "a a a b"
+        "c c c b"
+    ;
+    gap: 5px;
+    height: fit-content;
+}
+
+.a {
+    grid-area: a;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 5px;
+}
+
+.b {
+    grid-area: b;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.c {
+    grid-area: c;
+    display: flex;
+    justify-content: space-between;
+    gap: 5px;
+}
+
+.calc_button {
+    width: 100%;
+    padding: 3px 0;
+    background: transparent;
+    color: #fff;
+    border: 1px solid var(--accent-primary);
+    font-family: "VT323", monospace;
+    font-size: 20px;
+}
+.calc_button:hover {
+    background: var(--accent-primary);
+}
+
+.calc_button i {
+    font-size: 16px;
+}
+
+.calc_input {
+    padding: 3px 5px;
+    width: 100%;
+    background: transparent;
+    border: 1px solid var(--accent-primary);
+    color: #fff;
+    font-family: "VT323", monospace;
+    font-size: 20px;
+}
+
+#equal {
+    border: 1px solid var(--accent-secondary);
+    width: 108%;
+}
+
+#equal:hover {
+    background: var(--accent-secondary);
+    color: #000;
+}
