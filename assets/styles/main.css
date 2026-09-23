@@ -7,6 +7,7 @@
 @import url(apps/gallery.css);
 @import url(apps/clock.css);
 @import url(apps/calc.css);
+@import url(apps/console.css);
 
 body {
     font-family: "VT323", monospace;

@@ -6,6 +6,7 @@ import('./apps/notepad.js');
 import('./apps/gallery.js');
 import('./apps/clock.js');
 import('./apps/calc.js');
+import('./apps/console.js')
 
 
 // [ Welcome ]

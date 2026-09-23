@@ -1,0 +1,38 @@
+#console_app {
+    width: 400px;
+    height: 180px;
+    top: 20px;
+    right: 20px;
+}
+
+.console_user {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    width: 100%;
+}
+
+.console_user label {
+    color: var(--accent-secondary);
+}
+
+.console_user input {
+    padding: 2px 5px;
+    background: transparent;
+    color: #fff;
+    font-family: "VT323", monospace;
+    font-size: 16px;
+    flex: 1;
+}
+
+.console_output {
+    width: 100%;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+#console_main {
+    height: 100px;
+    overflow-y: auto;
+    scrollbar-width: none;
+}
