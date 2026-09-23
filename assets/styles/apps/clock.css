@@ -1,4 +1,4 @@
-#clock_app {
+.clock_app {
     width: 300px;
     height: 300px;
     bottom: 20px;
@@ -64,7 +64,7 @@
     border: 1px solid var(--accent-secondary);
 }
 
-#start_countdown, #restart_countdown {
+.countd_button {
     background: transparent;
     border: 1px dashed var(--accent-secondary);
     padding: 10px;
@@ -75,7 +75,7 @@
     user-select: none;
 }
 
-#start_countdown:hover, #restart_countdown:hover {
+.countd_button:hover {
     color: var(--accent-secondary);
     border: 1px solid var(--accent-secondary);
 }

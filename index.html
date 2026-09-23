@@ -7,10 +7,19 @@
     <title>wayneWebOS</title>
     <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="assets/styles/main.css">
+    <link rel="stylesheet" href="assets/styles/global.css">
+    <link rel="stylesheet" href="assets/styles/apps/browser.css">
+    <link rel="stylesheet" href="assets/styles/apps/calc.css">
+    <link rel="stylesheet" href="assets/styles/apps/clock.css">
+    <link rel="stylesheet" href="assets/styles/apps/console.css">
+    <link rel="stylesheet" href="assets/styles/apps/gallery.css">
+    <link rel="stylesheet" href="assets/styles/apps/notepad.css">
+    <link rel="stylesheet" href="assets/styles/apps/settings.css">
+    <link rel="stylesheet" href="assets/styles/apps/to_do.css">
 </head>
 
 <body id="body">
-    <div id="dark"></div>
+    <div id="dark" class="dark"></div>
     <header id="header">
         <div class="header_wrapper">
             <div class="logo">
@@ -18,19 +27,19 @@
             </div>
             <div class="apps_panel">
                 <button class="app" id="all_apps">
-                    <img src="assets/media/menu.png" alt="folder">
+                    <i class="fa-sharp fa-solid fa-grip app_icon"></i>
                     <span>All apps</span>
                 </button>
                 <button class="app settings">
-                    <img src="assets/media/settings.png" alt="settings">
+                    <i class="fa-sharp fa-solid fa-gear app_icon"></i>
                     <span>Settings</span>
                 </button>
                 <button class="app browser">
-                    <img src="assets/media/browser.png" alt="browser">
+                    <i class="fa-brands fa-chrome app_icon"></i>
                     <span>Browser</span>
                 </button>
                 <button class="app todo">
-                    <img src="assets/media/to-do.png" alt="to-do">
+                    <i class="fa-sharp fa-solid fa-list-check app_icon"></i>
                     <span>To-do</span>
                 </button>
             </div>
@@ -43,6 +52,7 @@
     <main>
         <!-- welcome -->
         <div class="welcome" id="welcome">
+            <h2>Howdy! I'm Wayne,<br>welcome to my WebOS.</h2>
             <img src="assets/media/welcome.png" alt="Welcome!" width="450px">
             <button id="start">OK</button>
         </div>
@@ -55,7 +65,7 @@
 
         <!-- APPS -->
         <!-- to do -->
-        <div class="app_window" id="to_do_app">
+        <div class="app_window to_do_app" id="to_do_app">
             <div class="dragzone" id="todo_dragzone">
                 <span>> to_do.app</span>
                 <button id="close_to_do">❌</button>
@@ -77,7 +87,7 @@
         </div>
 
         <!-- browser -->
-        <div class="app_window" id="browser_app">
+        <div class="app_window browser_app" id="browser_app">
             <div class="dragzone" id="browser_dragzone">
                 <span>> browser.app</span>
                 <button id="close_browser">❌</button>
@@ -89,7 +99,7 @@
         </div>
 
         <!-- settings -->
-        <div class="app_window" id="settings_app">
+        <div class="app_window settings_app" id="settings_app">
             <div class="dragzone" id="settings_dragzone">
                 <span>> settings.app</span>
                 <button id="close_settings">❌</button>
@@ -99,16 +109,16 @@
                 <h4 class="settings_title">Themes</h4>
                 <div class="themes">
                     <div class="theme_box" id="default">
-                        <img src="assets/media/bg.png" alt="Default">
-                        <span>Dark Forest (default)</span>
+                        <img src="assets/media/default.jpg" alt="Default">
+                        <span>Herobrine (default)</span>
                     </div>
                     <div class="theme_box" id="ocean">
-                        <img src="assets/media/bg2.png" alt="Light">
-                        <span>Ocean</span>
+                        <img src="assets/media/nether.jpg" alt="Light">
+                        <span>Nether</span>
                     </div>
                     <div class="theme_box" id="twilight">
-                        <img src="assets/media/bg3.png" alt="Dark2">
-                        <span>Twilight</span>
+                        <img src="assets/media/ice.jpg" alt="Dark2">
+                        <span>Ice</span>
                     </div>
                 </div>
                 <h4 class="settings_title">Layout</h4>
@@ -126,7 +136,7 @@
         </div>
 
         <!-- notepad -->
-        <div class="app_window" id="notepad_app">
+        <div class="app_window notepad_app" id="notepad_app">
             <div class="dragzone" id="notepad_dragzone">
                 <span>> notepad.app</span>
                 <button id="close_notepad">❌</button>
@@ -153,7 +163,7 @@
         </div>
 
         <!-- gallery -->
-        <div class="app_window" id="gallery_app">
+        <div class="app_window gallery_app" id="gallery_app">
             <div class="dragzone" id="gallery_dragzone">
                 <span>> gallery.app</span>
                 <button id="close_gallery">❌</button>
@@ -243,7 +253,7 @@
         </div>
 
         <!-- clock -->
-        <div class="app_window" id="clock_app">
+        <div class="app_window clock_app" id="clock_app">
             <div class="dragzone" id="clock_dragzone">
                 <span>> clock.app</span>
                 <button id="close_clock">❌</button>
@@ -258,8 +268,8 @@
                 <div class="timer" id="timer_box">
                     <span id="timer">00:00:00</span>
                     <div class="timer_buttons">
-                        <button id="start_timer">[ start ]</button>
-                        <button id="reset_timer">[ reset ]</button>
+                        <button id="start_timer" class="countd_button">[ start ]</button>
+                        <button id="reset_timer" class="countd_button">[ reset ]</button>
                     </div>
                 </div>
                 <div class="countdown" id="countdown_box">
@@ -287,7 +297,7 @@
         </div>
 
         <!-- calcultor -->
-        <div class="app_window" id="calc_app">
+        <div class="app_window calc_app" id="calc_app">
             <div class="dragzone" id="calc_dragzone">
                 <span>> calculator.app</span>
                 <button id="close_calc">❌</button>
@@ -319,17 +329,17 @@
                         <button class="calc_button">/</button>
                     </div>
                 </div>
-                <button class="calc_button" id="equal">=</button>
+                <button class="calc_button equal" id="equal">=</button>
             </div>
         </div>
 
         <!-- console -->
-        <div class="app_window" id="console_app">
+        <div class="app_window console_app" id="console_app">
             <div class="dragzone" id="console_dragzone">
                 <span>> console.app</span>
                 <button id="close_console">❌</button>
             </div>
-            <div class="app_main" id="console_main">
+            <div class="app_main console_main" id="console_main">
                 <div class="console_user" id="user_input">
                     <label for="console_input">wayne14@W14:~$</label>
                     <input type="text" id="console_input" autofocus placeholder="help"></input>
@@ -344,35 +354,35 @@
             </div>
             <div class="all_wrapper">
                 <button class="app" id="console">
-                    <img src="assets/media/console.png" alt="console">
+                    <i class="fa-sharp fa-solid fa-terminal app_icon"></i>
                     <span>Console</span>
                 </button>
                 <button class="app" id="calc">
-                    <img src="assets/media/calc.png" alt="calculator">
+                    <i class="fa-sharp fa-solid fa-calculator app_icon"></i>
                     <span>Calculator</span>
                 </button>
                 <button class="app" id="clock">
-                    <img src="assets/media/clock.png" alt="clock">
+                    <i class="fa-sharp fa-solid fa-stopwatch app_icon"></i>
                     <span>Clock</span>
                 </button>
                 <button class="app" id="gallery">
-                    <img src="assets/media/gallery.png" alt="gallery">
+                    <i class="fa-sharp fa-solid fa-image app_icon"></i>
                     <span>Gallery</span>
                 </button>
                 <button class="app" id="notepad">
-                    <img src="assets/media/notepad.png" alt="notepad">
+                    <i class="fa-sharp fa-solid fa-file-pen app_icon"></i>
                     <span>Notepad</span>
                 </button>
                 <button class="app settings">
-                    <img src="assets/media/settings.png" alt="settings">
+                    <i class="fa-sharp fa-solid fa-gear app_icon"></i>
                     <span>Settings</span>
                 </button>
                 <button class="app browser">
-                    <img src="assets/media/browser.png" alt="browser">
+                    <i class="fa-brands fa-chrome app_icon"></i>
                     <span>Browser</span>
                 </button>
                 <button class="app todo">
-                    <img src="assets/media/to-do.png" alt="to-do">
+                    <i class="fa-sharp fa-solid fa-list-check app_icon"></i>
                     <span>To-do</span>
                 </button>
             </div>

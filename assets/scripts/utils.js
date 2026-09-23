@@ -1,64 +1,52 @@
 // [ Time ]
-var currentTime = new Date().toLocaleTimeString();
-var timeElem = document.getElementById("time");
+const timeElem = document.getElementById("time");
+let currentTime = new Date().toLocaleTimeString();
 
 timeElem.innerText = "⌚ " + currentTime;
 
 setInterval(() => {
-    var currentTime = new Date().toLocaleTimeString();
-    if (timeElem.innerText != currentTime)
-    {
-        timeElem.innerText = "⌚ " + currentTime;
-    }
+    let currentTime = new Date().toLocaleTimeString();
+    timeElem.innerText = "⌚ " + currentTime;
 }, 1000);
 
 
 // [ Date ]
 
-var currentDate = new Date().toDateString();
-var dateElem = document.getElementById("date");
+const dateElem = document.getElementById("date");
+let currentDate = new Date().toDateString();
 
 dateElem.innerText = "📆 " + currentDate;
 
 
 // [ Battery ]
 
+const batteryElem = document.getElementById("battery");
 
+function updateBatteryUI(battery) {
+    const batteryLevel = Math.round(battery.level * 100);
+    const isCharging = battery.charging;
 
-setInterval(() => {
-    var batteryElem = document.getElementById("battery");
-    navigator.getBattery().then((battery) => {
-        const batteryLevel = battery.level * 100;
-        var isCharging = battery.charging;
-    
-        if (batteryLevel > 40) {
-            var batteryIcon = '🔋';
-        } else {
-            var batteryIcon = '🪫';
-        }
-    
-        if (isCharging) {
-            var chargingIcon = "⚡";
-        } else {
-            var chargingIcon = '';
-        }
-    
-        batteryElem.innerText = batteryIcon + batteryLevel + chargingIcon;
-    })    
-}, 1000);
+    const batteryIcon = batteryLevel > 40 ? '🔋' : '🪫';
+    const chargingIcon = isCharging ? '⚡' : '';
 
+    batteryElem.innerText = batteryIcon + batteryLevel + '%' + chargingIcon;
+}
+
+navigator.getBattery().then((battery) => {
+    updateBatteryUI(battery);
+
+    battery.addEventListener('levelchange', () => {
+        updateBatteryUI(battery);
+    });
+
+    battery.addEventListener('chargingchange', () => {
+        updateBatteryUI(battery);
+    });
+});
 
 
 // [ Security ]
+const securityElem = document.getElementById("security");
+const isSecure = window.isSecureContext;
 
-setInterval(() => {
-    var securityElem = document.getElementById("security");
-    
-    const isSecure = window.isSecureContext;
-    
-    if (isSecure) {
-        securityElem.innerText = "🛡️☑️"
-    } else {
-        securityElem.innerText = "🛡️❌"
-    }
-}, 1000)
+securityElem.innerText = isSecure ? "🛡️☑️" : "🛡️❌";

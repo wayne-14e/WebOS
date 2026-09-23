@@ -1,4 +1,4 @@
-#console_app {
+.console_app {
     width: 400px;
     height: 180px;
     top: 20px;
@@ -31,7 +31,7 @@
     letter-spacing: 1.5px;
 }
 
-#console_main {
+.console_main {
     height: 100px;
     overflow-y: auto;
     scrollbar-width: none;

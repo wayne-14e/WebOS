@@ -1,4 +1,4 @@
-#calc_app {
+.calc_app {
     width: 200px;
     height: 280px;
     top: 200px;
@@ -69,12 +69,12 @@
     font-size: 20px;
 }
 
-#equal {
+.equal {
     border: 1px solid var(--accent-secondary);
     width: 108%;
 }
 
-#equal:hover {
+.equal:hover {
     background: var(--accent-secondary);
     color: #000;
 }

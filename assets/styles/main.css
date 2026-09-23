@@ -1,20 +1,11 @@
-@import url(global.css);
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=VT323&display=swap');
-@import url(apps/to_do.css);
-@import url(apps/browser.css);
-@import url(apps/settings.css);
-@import url(apps/notepad.css);
-@import url(apps/gallery.css);
-@import url(apps/clock.css);
-@import url(apps/calc.css);
-@import url(apps/console.css);
 
 body {
     font-family: "VT323", monospace;
     font-weight: 400;
     font-style: normal;
     color: #fff;
-    background-image: url(../media/bg.png);
+    background-image: url(../media/default.jpg);
     backdrop-filter: brightness(0.69);
     background-size: cover;
     background-repeat: no-repeat;
@@ -29,7 +20,7 @@ body {
 }
 
 header {
-    background: #4c5157a4;
+    background: var(--bg-secondary);
     backdrop-filter: blur(7px);
     border-bottom: var(--accent-primary) 1px solid;
     width: 100%;
@@ -62,20 +53,17 @@ header {
 }
 
 .app {
-    background: transparent;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     background: var(--bg-primary);
     color: #fff;
     width: 64px;
     height: 64px;
     border: 1px solid var(--accent-primary);
     outline-offset: 2px;
-}
-
-.app img {
-    height: 50px;
+    gap: 5px;
 }
 
 .app:hover {
@@ -86,10 +74,14 @@ header {
 .app span {
     font-family: "VT323", monospace;
     font-size: 14px;
-    line-height: 12px;
 }
 
-#dark {
+.app_icon {
+    font-size: 36px;
+    color: var(--accent-secondary);
+}
+
+.dark {
     width: 100vw;
     height: 100vh;
     z-index: 5;
@@ -108,7 +100,7 @@ header {
     left: 50%;
     transform: translate(-50%, -50%);
     display: flex;
-    background-color: #4c515789;
+    background-color: var(--bg-secondary);
     filter: brightness(1);
     align-items: flex-end;
     backdrop-filter: blur(4px);
@@ -125,6 +117,12 @@ header {
     font-size: 20px;
     color: #fff;
     background-color: var(--accent-primary);
+}
+
+.welcome h2 {
+    position: absolute;
+    top: 20px;
+    left: 20px;
 }
 
 .welcome button:hover {

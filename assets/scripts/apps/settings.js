@@ -44,7 +44,7 @@ settingsIcon.forEach(button => {
             twilightTheme.style.outline = "1px dashed var(--accent-primary)";
             oceanTheme.style.outline = "1px dashed var(--accent-primary)"
             
-            document.getElementById("body").style.backgroundImage = "url(./assets/media/bg.png)";
+            document.getElementById("body").style.backgroundImage = "url(./assets/media/default.jpg)";
             document.documentElement.style.setProperty('--accent-secondary', '#4bfc2c')
         })
 
@@ -53,7 +53,7 @@ settingsIcon.forEach(button => {
             twilightTheme.style.outline = "1px dashed var(--accent-primary)";
             oceanTheme.style.outline = "1px solid var(--accent-secondary)"
             
-            document.getElementById("body").style.backgroundImage = "url(./assets/media/bg2.png)";
+            document.getElementById("body").style.backgroundImage = "url(./assets/media/nether.jpg)";
             document.documentElement.style.setProperty('--accent-secondary', '#FF5500')
         })
 
@@ -62,7 +62,7 @@ settingsIcon.forEach(button => {
             oceanTheme.style.outline = "1px dashed var(--accent-primary)"
             twilightTheme.style.outline = "1px solid var(--accent-secondary)";
             
-            document.getElementById("body").style.backgroundImage = "url(./assets/media/bg3.png)";
+            document.getElementById("body").style.backgroundImage = "url(./assets/media/ice.jpg)";
             document.documentElement.style.setProperty('--accent-secondary', '#00FFFF')
         })
 

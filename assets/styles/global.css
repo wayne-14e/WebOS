@@ -3,7 +3,6 @@
     padding: 0;
     margin: 0;
     border: none;
-    outline: none;
     cursor: url("../media/cursor.svg") 8 8, auto;
 }
 
@@ -12,7 +11,7 @@
     --accent-secondary: #4bfc2c;
 
     --bg-primary: #080808;
-    --bg-secondary: #4C5157;
+    --bg-secondary: #4c5157c2;
 }
 
 button {
