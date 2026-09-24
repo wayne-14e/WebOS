@@ -25,14 +25,30 @@
     width: 120px;
 }
 
-.notepad_name i {
-    font-size: 12px;
+.rename {
+    width: 16px;
+    fill: #fff;
+}
+
+.trash {
+    fill: #000;
+    height: 18px;
+}
+
+.formatting {
+    display: flex;
+    align-items: center;
+    gap: 5px;
 }
 
 .formatting button {
     background: #fff;
-    padding: 5px 10px;
+    width: 30px;
+    height: 25px;
     color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .formatting button:hover {

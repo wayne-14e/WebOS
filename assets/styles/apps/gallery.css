@@ -72,17 +72,19 @@
         backdrop-filter: blur(7px);
 }
 
-.photos li i {
+.download_image {
     background-color: var(--accent-primary);
-    padding: 3px;
+    padding: 1px;
     position: absolute;
     bottom: 0px;
     right: 0px;
     color: #fff;
-    font-size: 12px;
+    width: 16px;
+    height: 16px;
+    fill: #fff;
 }
 
-.photos li i:hover {
+.download_image:hover {
     outline: 1px solid var(--accent-secondary);
 }
 

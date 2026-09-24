@@ -78,7 +78,7 @@ header {
 
 .app_icon {
     font-size: 36px;
-    color: var(--accent-secondary);
+    fill: var(--accent-secondary);
 }
 
 .dark {
